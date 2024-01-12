@@ -24,6 +24,14 @@ models:
 
       - name: product_department
         description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - "Men"
+                - "Women"
+              quote: true
+              severity: error
 
       - name: product_sku
         description: ""
